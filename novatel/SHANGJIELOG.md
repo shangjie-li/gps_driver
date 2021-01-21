@@ -20,11 +20,10 @@
     - ENU(东北天)全局坐标系的定义：X轴指向正东，Y轴指向正北，单位米。
     - 车辆局部坐标系的定义：在水平面投影图中，车辆轮廓的几何中心为坐标原点，X轴指向车辆前方，Y轴指向车辆左方，单位米。
  - 测量`location_original_x` `location_original_y`
-   ```Shell
-   # 1.使车头朝东，即yaw_ENU=0度，停入某东西方向的车位，记录ENU全局坐标(utm_x1,utm_y1)
-   # 2.使车头朝西，即yaw_ENU=180度，再次停入该车位，记录ENU全局坐标(utm_x2,utm_y2)
-   # 3.location_original_x = (utm_x1 - utm_x2)/2
-   # 4.location_original_y = (utm_y1 - utm_y2)/2
+    - 1.使车头朝东，即yaw_ENU=0度，停入某东西方向的车位，记录ENU全局坐标(utm_x1,utm_y1)
+    - 2.使车头朝西，即yaw_ENU=180度，再次停入该车位，记录ENU全局坐标(utm_x2,utm_y2)
+    - 3.location_original_x = (utm_x1 - utm_x2)/2
+    - 4.location_original_y = (utm_y1 - utm_y2)/2
  - `nav_msgs::Odometry`
    ```Shell 
    pose.pose.position                              utm坐标
